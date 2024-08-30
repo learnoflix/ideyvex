@@ -43,7 +43,7 @@ const DataFetcher = () => {
   return (
     <>
       {data.postCreateds.map((row: any) => (
-        <Post {...row} />
+        <Post key={row.id} {...row} />
       ))}
     </>
   );
