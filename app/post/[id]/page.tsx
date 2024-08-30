@@ -1,11 +1,11 @@
-import { Post } from "./../../_components/Post";
 import { Header } from "./../../_components/Header";
 import Link from "next/link";
 import { WriteComment } from "@/app/_components/WriteComment";
-import { Comments } from "@/app/_components/Comments";
+import { SinglePost } from "@/app/_components/SinglePost";
 
 function Page({ params }: { params: { id: string } }) {
   const id = params.id;
+
   return (
     <>
       <Header />
@@ -13,9 +13,8 @@ function Page({ params }: { params: { id: string } }) {
         <Link href="/" className="text-md font-normal text-amer-400 py-8">
           {"<"} Back to vex
         </Link>
-        <Post id={id} />
+        <SinglePost id={id} />
         <WriteComment id={id} />
-        <Comments id={id} />
       </div>
     </>
   );
