@@ -1,0 +1,29 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: IDeyVex
+    network: base-sepolia
+    source:
+      address: "0xC73Dfc54b16A104a75aD7b778e0F1b0B021AbCeD"
+      abi: IDeyVex
+      startBlock: 14637068
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - CommentCreated
+        - PostCreated
+      abis:
+        - name: IDeyVex
+          file: ./abis/IDeyVex.json
+      eventHandlers:
+        - event: CommentCreated(string,indexed address)
+          handler: handleCommentCreated
+        - event: PostCreated(uint256,string,indexed address)
+          handler: handlePostCreated
+      file: ./src/i-dey-vex.ts

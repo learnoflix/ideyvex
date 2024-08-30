@@ -1,0 +1,18 @@
+type CommentCreated @entity(immutable: true) {
+  id: Bytes!
+  body: String! # string
+  author: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type PostCreated @entity(immutable: true) {
+  id: Bytes!
+  IDeyVex_id: BigInt! # uint256
+  body: String! # string
+  author: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
