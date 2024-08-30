@@ -1,9 +1,5 @@
 "use client";
 
-import { useAccount, useReadContract, useWriteContract } from "wagmi";
-import { abi } from "../../abi";
-import { config } from "../../wagmi";
-import { Address } from "viem";
 import { createAvatar } from "@dicebear/core";
 import { croodles } from "@dicebear/collection";
 import Image from "next/image";
@@ -14,16 +10,7 @@ interface PostProps {
 }
 
 export function Post({ id }: PostProps) {
-  const account = useAccount({ config });
-  const { writeContract } = useWriteContract();
-  const contractAddress = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS! as Address;
-  const { data, refetch } = useReadContract({
-    abi,
-    address: contractAddress,
-    functionName: "getCount",
-    account: account.address,
-    query: { enabled: false, initialData: 0x0 },
-  });
+
   const AVATAR = (address: any) => {
     const avatar = createAvatar(croodles, {
       seed: address,

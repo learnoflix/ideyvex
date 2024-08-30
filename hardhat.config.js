@@ -8,7 +8,7 @@ module.exports = {
     "base-sepolia": {
       chainId: 84532,
       url: "https://sepolia.base.org", 
-      accounts: [`0x${process.env.WALLET_KEY}`],
+      accounts: [`0x${process.env.NEXT_PUBLIC_CONTRACT_ADDRESS}`],
     },
   },
 };
