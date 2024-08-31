@@ -34,7 +34,7 @@ export function Comments({ id }: CommentsProps) {
               <b className="text-amber-600">User:</b> 0x0000000000000000000000
             </div>
             <div className="text-xs font-normal text-stone-800">
-              <b className="text-amber-600">Time:</b> 40 minutes ago.
+              <b className="text-amber-600"></b> 40 minutes ago.
             </div>
           </div>
         </div>
@@ -53,7 +53,7 @@ export function Comments({ id }: CommentsProps) {
               <b className="text-amber-600">User:</b> 0x0000000000000000000000
             </div>
             <div className="text-xs font-normal text-stone-800">
-              <b className="text-amber-600">Time:</b> 40 minutes ago.
+              <b className="text-amber-600"></b> 40 minutes ago.
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@ export function Comments({ id }: CommentsProps) {
               <b className="text-amber-600">User:</b> 0x0000000000000000000000
             </div>
             <div className="text-xs font-normal text-stone-800">
-              <b className="text-amber-600">Time:</b> 40 minutes ago.
+              <b className="text-amber-600"></b> 40 minutes ago.
             </div>
           </div>
         </div>
@@ -91,7 +91,7 @@ export function Comments({ id }: CommentsProps) {
               <b className="text-amber-600">User:</b> 0x0000000000000000000000
             </div>
             <div className="text-xs font-normal text-stone-800">
-              <b className="text-amber-600">Time:</b> 40 minutes ago.
+              <b className="text-amber-600"></b> 40 minutes ago.
             </div>
           </div>
         </div>

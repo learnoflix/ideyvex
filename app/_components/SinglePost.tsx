@@ -72,11 +72,11 @@ export function SinglePost({ id }: postId) {
               {row.body}
             </div>
             <div className="text-xs font-normal text-stone-800">
-              <b className="text-amber-600">Author:</b>
+              <b className="text-amber-600">By:</b>
               {row.author.substring(0, 12) + "..."}
             </div>
             <div className="text-xs font-normal text-stone-800">
-              <b className="text-amber-600">Time:</b>{" "}
+              <b className="text-amber-600"></b>{" "}
               {moment.unix(row.blockTimestamp).fromNow()}
             </div>
             <div className="flex flex-none space-x-4 items-center justify-end ml-auto w-full">
