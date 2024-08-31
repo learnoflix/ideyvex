@@ -44,22 +44,23 @@ export function Post(row: rowInterface) {
             {row.body}
           </Link>
           <div className="text-xs font-normal text-stone-800">
-            <b className="text-amber-600">Author:</b> {row.author}
+            <b className="text-amber-600">Author:</b>{" "}
+            {row.author.substring(0, 12) + "..."}
           </div>
           <div className="text-xs font-normal text-stone-800">
             <b className="text-amber-600">Time:</b>{" "}
             {moment.unix(row.blockTimestamp).fromNow()}
           </div>
           <div className="flex flex-none space-x-4 items-center justify-end ml-auto w-full">
-            <div className="flex items-center space-x-1 bg-lime-100 px-4 py-2 rounded-md border-2 border-lime-100 cursor-pointer">
+            <div className="flex items-center space-x-1  cursor-pointer">
               <Image src="/novex.png" width={24} height={24} alt="novex" />
-              <div className="text-md font-light text-lime-600">
+              <div className="text-xl font-normal text-lime-600">
                 {Number(row.vex ?? 0)}
               </div>
             </div>
-            <div className="flex items-center space-x-1 bg-rose-100 px-4 py-2 rounded-md border-2 border-rose-100 cursor-pointer">
-              <Image src="/vex.png" width={24} height={24} alt="novex" />
-              <div className="text-md font-light text-rose-600">
+            <div className="flex items-center space-x-1 cursor-pointer">
+              <Image src="/vex.png" width={24} height={24} alt="vex" />
+              <div className="text-xl font-normal text-rose-600">
                 {Number(row.novex ?? 0)}
               </div>
             </div>
